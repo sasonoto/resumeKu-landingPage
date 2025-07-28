@@ -16,37 +16,45 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import step1Image from "@/assets/step-1-signup.jpg";
+import step2Image from "@/assets/step-2-dashboard.jpg";
+import step3Image from "@/assets/step-3-builder.jpg";
+import step4Image from "@/assets/step-4-ai-optimization.jpg";
 
 export const CaraMembuatCV = () => {
   const steps = [
     {
       number: 1,
       icon: <UserPlus className="h-12 w-12 text-primary" />,
-      title: "Sign Up / Log In",
-      description: "Easy Sign up with Google Account",
-      details: "Daftar dengan mudah menggunakan akun Google Anda. Proses pendaftaran hanya membutuhkan 1 klik dan langsung bisa mulai membuat CV profesional."
+      title: "🚀 Akses Instan",
+      description: "Langsung masuk dengan Google - Zero ribet, maksimal hasil!",
+      details: "Daftar sekali klik dengan Google dan langsung terhubung ke dashboard canggih kami. Tidak perlu mengingat password atau mengisi formulir panjang!",
+      image: step1Image
     },
     {
       number: 2,
       icon: <LayoutDashboard className="h-12 w-12 text-primary" />,
-      title: "Dashboard (User Home)",
-      description: "✍️ Create New CV/Resume\n📄 Choose English/Indonesia Resume/CV\n💼 Choose Templates with each has its own Guides",
-      details: "Di dashboard, Anda akan melihat semua CV yang telah dibuat dan dapat memilih untuk membuat CV baru dalam bahasa Indonesia atau Inggris dengan berbagai template profesional."
+      title: "🎯 Command Center Pribadi",
+      description: "Dashboard pintar dengan 20+ template premium dan panduan ahli untuk setiap industri",
+      details: "Pilih bahasa (Indonesia/English), template yang sesuai profesi, dan dapatkan panduan khusus untuk industri target Anda. Semua tersedia dalam satu tempat!",
+      image: step2Image
     },
     {
       number: 3,
       icon: <FileText className="h-12 w-12 text-primary" />,
-      title: "Step-by-Step Resume Builder",
-      subtitle: "A. Profile Setup",
-      description: "Users enter rough experiences\n✅ AI Refinement Button: Enhances clarity, uses action verbs, and aligns with job descriptions\ngo to preview",
-      details: "Masukkan pengalaman kerja Anda secara singkat. AI kami akan membantu memperbaiki dan mengoptimalkan setiap kalimat agar lebih menarik dan profesional."
+      title: "✨ AI Writing Assistant",
+      subtitle: "Transform Your Experience",
+      description: "Tulis pengalaman apa adanya → Klik tombol AI → Boom! Jadi bullet point yang memukau HRD",
+      details: "Cukup ceritakan pengalaman Anda secara natural. AI kami akan mengubahnya menjadi kalimat-kalimat powerful dengan action verbs dan keywords yang tepat sasaran!",
+      image: step3Image
     },
     {
       number: 4,
       icon: <Sparkles className="h-12 w-12 text-primary" />,
-      title: "AI-Powered Optimization in Preview",
-      description: "Suggestions appear in a sidebar:\n- Reworded bullet points\n- Keywords match for selected industry\n- Formatting tips (based on chosen template)\n- One-click Apply Suggestions",
-      details: "Lihat preview CV Anda dan dapatkan saran AI untuk meningkatkan kualitas. Semua saran dapat diterapkan dengan satu klik untuk hasil yang optimal."
+      title: "🎉 CV Optimization Station",
+      description: "Sidebar AI memberikan saran real-time: keyword matching, format fixes, dan impact boosters - semua dengan 1-click apply!",
+      details: "Preview CV langsung dengan sidebar AI yang memberikan saran pintar untuk meningkatkan kekuatan CV Anda. Tinggal klik 'Apply' dan CV jadi sempurna!",
+      image: step4Image
     }
   ];
 
@@ -157,15 +165,25 @@ export const CaraMembuatCV = () => {
                         </div>
                       </CardHeader>
                       
-                      <CardContent className="lg:p-12 flex items-center justify-center bg-muted/20">
-                        <div className="text-center">
+                      <CardContent className="lg:p-12 flex items-center justify-center bg-muted/20 relative overflow-hidden">
+                        {step.image && (
+                          <div className="absolute inset-0">
+                            <img 
+                              src={step.image} 
+                              alt={step.title}
+                              className="w-full h-full object-cover opacity-30"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
+                          </div>
+                        )}
+                        <div className="text-center relative z-10">
                           <div className="mb-6 transform hover:scale-110 transition-transform duration-300">
                             {step.icon}
                           </div>
-                          <div className="text-6xl font-bold text-primary/20 mb-2">
+                          <div className="text-6xl font-bold text-primary/60 mb-2">
                             0{step.number}
                           </div>
-                          <div className="text-muted-foreground">
+                          <div className="text-muted-foreground font-medium">
                             Langkah {step.number} dari 4
                           </div>
                         </div>
