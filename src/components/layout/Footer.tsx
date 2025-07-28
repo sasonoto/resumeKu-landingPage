@@ -27,7 +27,7 @@ export const Footer = () => {
               <Link href="/harga" className="block text-muted-foreground hover:text-foreground transition-colors">
                 Harga & Paket
               </Link>
-              <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://app.resumeku.id" className="block text-muted-foreground hover:text-foreground transition-colors">
                 Template CV
               </a>
             </div>

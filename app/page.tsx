@@ -111,7 +111,7 @@ export default function HomePage() {
               <ScrollAnimation delay={600}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button size="lg" className="gradient-primary text-white hover:shadow-glow transition-all duration-300" asChild>
-                    <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.resumeku.id">
                       Coba Gratis Sekarang <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>
@@ -232,7 +232,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <Button className="gradient-primary text-white" asChild>
-                  <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                  <a href="https://app.resumeku.id">
                     Mulai Sekarang
                   </a>
                 </Button>
@@ -324,7 +324,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <Button className="gradient-primary text-white" asChild>
-                  <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                  <a href="https://app.resumeku.id">
                     Bergabung Sekarang
                   </a>
                 </Button>
@@ -346,7 +346,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gradient-primary text-white hover:shadow-glow transition-all duration-300" asChild>
-                <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.resumeku.id">
                   Mulai Gratis Sekarang <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

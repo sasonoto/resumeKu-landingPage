@@ -67,7 +67,7 @@ export const Navbar = () => {
               className="relative px-6 py-3 text-foreground hover:text-primary border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all duration-300 font-semibold text-sm tracking-wide" 
               asChild
             >
-              <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.resumeku.id">
                 Masuk
               </a>
             </Button>
@@ -75,7 +75,7 @@ export const Navbar = () => {
               className="relative px-8 py-3 bg-gradient-to-r from-primary via-primary/90 to-purple-600 text-white font-semibold rounded-xl shadow-[0_4px_20px_rgba(139,92,246,0.4)] hover:shadow-[0_8px_30px_rgba(139,92,246,0.6)] hover:scale-105 transition-all duration-300 border border-white/20 overflow-hidden group" 
               asChild
             >
-              <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.resumeku.id">
                 <span className="relative z-10">Coba Gratis</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </a>
@@ -127,7 +127,7 @@ export const Navbar = () => {
                     className="justify-start px-6 py-4 text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-300 font-semibold text-sm tracking-wide" 
                     asChild
                   >
-                    <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.resumeku.id">
                       Masuk
                     </a>
                   </Button>
@@ -135,7 +135,7 @@ export const Navbar = () => {
                     className="bg-gradient-to-r from-primary via-primary/90 to-purple-600 text-white font-semibold rounded-xl shadow-[0_4px_20px_rgba(139,92,246,0.4)] hover:shadow-[0_8px_30px_rgba(139,92,246,0.6)] hover:scale-105 transition-all duration-300 py-4 border border-white/20" 
                     asChild
                   >
-                    <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.resumeku.id">
                       Coba Gratis
                     </a>
                   </Button>

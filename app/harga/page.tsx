@@ -253,7 +253,7 @@ export default function HargaPage() {
                       variant={pkg.popular ? 'default' : 'outline'}
                       asChild
                     >
-                      <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                      <a href="https://app.resumeku.id">
                         Pilih Paket Ini <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
@@ -401,7 +401,7 @@ export default function HargaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gradient-primary text-white hover:shadow-glow transition-all duration-300" asChild>
-                <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.resumeku.id">
                   Pilih Paket Sekarang <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

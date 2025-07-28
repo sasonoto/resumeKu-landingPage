@@ -119,7 +119,7 @@ export default function CaraMembuatCVPage() {
                 dengan bantuan teknologi AI terdepan
               </p>
               <Button size="lg" className="gradient-primary text-white hover:shadow-glow transition-all duration-300" asChild>
-                <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.resumeku.id">
                   Mulai Membuat CV <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -167,7 +167,7 @@ export default function CaraMembuatCVPage() {
                         </p>
                         <div className="mt-6">
                           <Button className="gradient-primary text-white" asChild>
-                            <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+                            <a href="https://app.resumeku.id">
                               Coba Langkah Ini
                             </a>
                           </Button>
@@ -317,7 +317,7 @@ export default function CaraMembuatCVPage() {
               Ikuti proses yang telah membantu 50,000+ pencari kerja sukses
             </p>
             <Button size="lg" className="gradient-primary text-white hover:shadow-glow transition-all duration-300" asChild>
-              <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.resumeku.id">
                 Mulai Proses Sekarang <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
