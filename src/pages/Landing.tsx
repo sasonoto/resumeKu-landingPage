@@ -5,9 +5,9 @@ import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { Star, Users, CheckCircle, Sparkles, Target, Zap, ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import heroImage from "@/assets/hero-image.jpg";
-import aiFeatures from "@/assets/ai-features.jpg";
-import successStory from "@/assets/success-story.jpg";
+const heroImage = "/assets/hero-image.jpg";
+const aiFeatures = "/assets/ai-features.jpg";
+const successStory = "/assets/success-story.jpg";
 
 export const Landing = () => {
   const testimonials = [

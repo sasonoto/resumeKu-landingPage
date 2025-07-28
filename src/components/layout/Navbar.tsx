@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export const Navbar = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-3 group">
+            <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary via-primary/90 to-purple-600 flex items-center justify-center shadow-[0_4px_20px_rgba(139,92,246,0.4)] group-hover:shadow-[0_8px_30px_rgba(139,92,246,0.6)] transition-all duration-300 group-hover:scale-110 border border-white/20">
                   <div className="relative flex items-center justify-center">
@@ -32,7 +32,7 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-2">
               <Link 
-                to="/" 
+                href="/" 
                 className="relative px-6 py-3 text-foreground hover:text-primary transition-all duration-300 font-semibold text-sm tracking-wide group"
               >
                 <span className="relative z-10">Beranda</span>
@@ -40,7 +40,7 @@ export const Navbar = () => {
                 <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-primary group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
               </Link>
               <Link 
-                to="/cara-membuat-cv" 
+                href="/cara-membuat-cv" 
                 className="relative px-6 py-3 text-foreground hover:text-primary transition-all duration-300 font-semibold text-sm tracking-wide group"
               >
                 <span className="relative z-10">Cara Membuat CV</span>
@@ -48,7 +48,7 @@ export const Navbar = () => {
                 <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-primary group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
               </Link>
               <Link 
-                to="/harga" 
+                href="/harga" 
                 className="relative px-6 py-3 text-foreground hover:text-primary transition-all duration-300 font-semibold text-sm tracking-wide group"
               >
                 <span className="relative z-10">Harga</span>
@@ -97,21 +97,21 @@ export const Navbar = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-white/10 shadow-2xl">
             <div className="px-4 py-6 space-y-2">
               <Link
-                to="/"
+                href="/"
                 className="block px-6 py-4 text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-300 font-semibold text-sm tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Beranda
               </Link>
               <Link
-                to="/cara-membuat-cv"
+                href="/cara-membuat-cv"
                 className="block px-6 py-4 text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-300 font-semibold text-sm tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Cara Membuat CV
               </Link>
               <Link
-                to="/harga"
+                href="/harga"
                 className="block px-6 py-4 text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-300 font-semibold text-sm tracking-wide"
                 onClick={() => setIsOpen(false)}
               >

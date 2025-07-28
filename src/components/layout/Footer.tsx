@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -20,72 +20,52 @@ export const Footer = () => {
           
           <div>
             <h3 className="font-semibold text-foreground mb-4">Produk</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/cara-membuat-cv" className="text-muted-foreground hover:text-primary transition-colors">
-                  Cara Membuat CV
-                </Link>
-              </li>
-              <li>
-                <Link to="/harga" className="text-muted-foreground hover:text-primary transition-colors">
-                  Harga
-                </Link>
-              </li>
-              <li>
-                <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  Template CV
-                </a>
-              </li>
-            </ul>
+            <div className="space-y-3">
+              <Link href="/cara-membuat-cv" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Cara Membuat CV
+              </Link>
+              <Link href="/harga" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Harga & Paket
+              </Link>
+              <a href="https://app.resumeku.id" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Template CV
+              </a>
+            </div>
           </div>
           
           <div>
             <h3 className="font-semibold text-foreground mb-4">Dukungan</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Bantuan
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Kontak
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
-                </a>
-              </li>
-            </ul>
+            <div className="space-y-3">
+              <a href="mailto:support@resumeku.id" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Kontak Support
+              </a>
+              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-colors">
+                WhatsApp
+              </a>
+              <Link href="/faq" className="block text-muted-foreground hover:text-foreground transition-colors">
+                FAQ
+              </Link>
+            </div>
           </div>
           
           <div>
             <h3 className="font-semibold text-foreground mb-4">Perusahaan</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tentang Kami
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Kebijakan Privasi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Syarat Layanan
-                </a>
-              </li>
-            </ul>
+            <div className="space-y-3">
+              <Link href="/tentang-kami" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Tentang Kami
+              </Link>
+              <Link href="/karir" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Karir
+              </Link>
+              <Link href="/kebijakan-privasi" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Kebijakan Privasi
+              </Link>
+            </div>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t text-center">
-          <p className="text-muted-foreground">
-            © 2024 ResumeKu. Semua hak cipta dilindungi.
-          </p>
+        <div className="border-t border-muted-foreground/20 mt-8 pt-8 text-center text-muted-foreground">
+          <p>&copy; 2025 ResumeKu. Semua hak dilindungi undang-undang.</p>
         </div>
       </div>
     </footer>

@@ -16,10 +16,10 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import step1Image from "@/assets/step-1-signup.jpg";
-import step2Image from "@/assets/step-2-dashboard.jpg";
-import step3Image from "@/assets/step-3-builder.jpg";
-import step4Image from "@/assets/step-4-ai-optimization.jpg";
+const step1Image = "/assets/step-1-signup.jpg";
+const step2Image = "/assets/step-2-dashboard.jpg";
+const step3Image = "/assets/step-3-builder.jpg";
+const step4Image = "/assets/step-4-ai-optimization.jpg";
 
 export const CaraMembuatCV = () => {
   const steps = [
