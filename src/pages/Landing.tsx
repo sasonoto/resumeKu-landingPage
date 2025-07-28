@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { Star, Users, CheckCircle, Sparkles, Target, Zap, ArrowRight } from "lucide-react";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import heroImage from "@/assets/hero-image.jpg";
 import aiFeatures from "@/assets/ai-features.jpg";
 import successStory from "@/assets/success-story.jpg";
@@ -56,6 +58,7 @@ export const Landing = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center gradient-hero">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
@@ -336,6 +339,8 @@ export const Landing = () => {
           </ScrollAnimation>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
