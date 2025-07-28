@@ -1,16 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: [],
     formats: ['image/webp', 'image/avif'],
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false, // Turn this off as it's causing the critters error
   },
-  // Enable static exports for Vercel
-  output: 'standalone',
+  // Remove the output: 'standalone' for development
 }
 
 module.exports = nextConfig
