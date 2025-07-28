@@ -1,1 +1,4 @@
-{}
+{
+  "/page": "app/page.js",
+  "/cara-membuat-cv/page": "app/cara-membuat-cv/page.js"
+}
