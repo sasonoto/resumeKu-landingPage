@@ -126,21 +126,11 @@ export const CaraMembuatCV = () => {
             {steps.map((step, index) => (
               <ScrollAnimation key={index} delay={index * 200}>
                 <div className="relative">
-                  {/* Curvy Arrow */}
-                  {index < steps.length - 1 && (
-                    <div className="absolute left-1/2 transform -translate-x-1/2 mt-8 hidden lg:block">
-                      <div className="w-1 h-20 bg-gradient-to-b from-primary to-accent rounded-full opacity-30"></div>
-                      <ArrowDown className="h-8 w-8 text-primary mx-auto -mt-2" />
-                    </div>
-                  )}
                   
                   <Card className="gradient-card border-0 shadow-elegant hover-lift overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       <CardHeader className="lg:p-12">
                         <div className="flex items-center gap-4 mb-6">
-                          <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-2xl">
-                            {step.number}
-                          </div>
                           <div>
                             <CardTitle className="text-2xl">{step.title}</CardTitle>
                             {step.subtitle && (
@@ -165,28 +155,16 @@ export const CaraMembuatCV = () => {
                         </div>
                       </CardHeader>
                       
-                      <CardContent className="lg:p-12 flex items-center justify-center bg-muted/20 relative overflow-hidden">
+                      <CardContent className="lg:p-0 flex items-center justify-center relative overflow-hidden">
                         {step.image && (
-                          <div className="absolute inset-0">
+                          <div className="w-full h-80 lg:h-full">
                             <img 
                               src={step.image} 
                               alt={step.title}
-                              className="w-full h-full object-cover opacity-30"
+                              className="w-full h-full object-cover rounded-r-lg"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
                           </div>
                         )}
-                        <div className="text-center relative z-10">
-                          <div className="mb-6 transform hover:scale-110 transition-transform duration-300">
-                            {step.icon}
-                          </div>
-                          <div className="text-6xl font-bold text-primary/60 mb-2">
-                            0{step.number}
-                          </div>
-                          <div className="text-muted-foreground font-medium">
-                            Langkah {step.number} dari 4
-                          </div>
-                        </div>
                       </CardContent>
                     </div>
                   </Card>
