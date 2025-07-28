@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -16,13 +17,13 @@ export const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary via-primary/90 to-purple-600 flex items-center justify-center shadow-[0_4px_20px_rgba(139,92,246,0.4)] group-hover:shadow-[0_8px_30px_rgba(139,92,246,0.6)] transition-all duration-300 group-hover:scale-110 border border-white/20">
-                  <div className="relative flex items-center justify-center">
-                    <span className="text-white font-bold text-xl mr-1 drop-shadow-sm">R</span>
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse shadow-sm"></div>
-                  </div>
-                </div>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-primary/30 to-transparent"></div>
+                <Image
+                  src="/logo.png"
+                  alt="ResumeKu Logo"
+                  width={56}
+                  height={56}
+                  className="transition-all duration-300 group-hover:scale-110 object-contain"
+                />
               </div>
               <span className="font-bold text-2xl bg-gradient-to-r from-foreground via-primary to-purple-600 bg-clip-text text-transparent drop-shadow-sm">
                 ResumeKu
