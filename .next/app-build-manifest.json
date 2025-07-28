@@ -16,10 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ],
     "/cara-membuat-cv/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/cara-membuat-cv/page.js"
+    ],
+    "/harga/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/harga/page.js"
     ]
   }
 }
