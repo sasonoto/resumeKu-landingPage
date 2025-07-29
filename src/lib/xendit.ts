@@ -1,8 +1,15 @@
 import { Xendit } from 'xendit-node'
 
 // Initialize Xendit client
+const getXenditKey = () => {
+  if (process.env.NODE_ENV === 'development' || !process.env.XENDIT_SECRET_KEY) {
+    return 'xnd_development_dummy_key_for_build'
+  }
+  return process.env.XENDIT_SECRET_KEY
+}
+
 const xendit = new Xendit({
-  secretKey: process.env.XENDIT_SECRET_KEY || '',
+  secretKey: getXenditKey(),
 })
 
 export interface PaymentData {
@@ -31,6 +38,11 @@ export class XenditService {
    */
   static async createInvoice(paymentData: PaymentData): Promise<XenditInvoiceResponse> {
     try {
+      // Check if we have a valid Xendit key
+      if (!process.env.XENDIT_SECRET_KEY || process.env.XENDIT_SECRET_KEY.includes('dummy')) {
+        throw new Error('Xendit secret key not configured properly')
+      }
+      
       const externalId = `resumeku-${paymentData.packageId}-${Date.now()}`
       
       const invoiceData = {
