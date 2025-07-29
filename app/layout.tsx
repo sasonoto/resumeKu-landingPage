@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
   keywords: 'cv builder, resume builder indonesia, buat cv, template cv, cv ats, cv professional',
   authors: [{ name: 'ResumeKu Team' }],
   openGraph: {
-    title: 'ResumeKu - CV Builder Indonesia Terbaik',
+    title: 'ResumeKu - AI CV Builder Indonesia Terbaik',
     description: 'Buat CV profesional dengan AI dalam hitungan menit',
-    url: 'https://resumeku.vercel.app',
+    url: 'https://resumeku.id',
     siteName: 'ResumeKu',
     locale: 'id_ID',
     type: 'website',
