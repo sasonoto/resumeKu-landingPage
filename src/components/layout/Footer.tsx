@@ -36,11 +36,11 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Dukungan</h3>
             <div className="space-y-3">
-              <a href="mailto:support@resumeku.id" className="block text-muted-foreground hover:text-foreground transition-colors">
-                Kontak Support
-              </a>
-              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-colors">
-                WhatsApp
+              <Link href="/kontak" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Hubungi Kami
+              </Link>
+              <a href="mailto:shf.niagautama@gmail.com" className="block text-muted-foreground hover:text-foreground transition-colors">
+                Email Support
               </a>
               <Link href="/faq" className="block text-muted-foreground hover:text-foreground transition-colors">
                 FAQ
@@ -64,8 +64,30 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-muted-foreground/20 mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2025 ResumeKu. Semua hak dilindungi undang-undang.</p>
+        <div className="border-t border-muted-foreground/20 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <h4 className="font-semibold text-foreground mb-3">Informasi Perusahaan</h4>
+              <div className="text-sm text-muted-foreground space-y-1">
+                <p className="font-medium">PT SHF NIAGA UTAMA</p>
+                <p>Jl. Raya Bogor - Sukabumi</p>
+                <p>Kel. Cigombong, Kec. Cigombong</p>
+                <p>Kabupaten Bogor, Jawa Barat 16110</p>
+                <p>Email: shf.niagautama@gmail.com</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground mb-3">Jam Operasional</h4>
+              <div className="text-sm text-muted-foreground space-y-1">
+                <p>Senin - Jumat: 09:00 - 17:00 WIB</p>
+                <p>Sabtu: 09:00 - 15:00 WIB</p>
+                <p>Minggu: Tutup</p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center text-muted-foreground">
+            <p>&copy; 2025 PT SHF NIAGA UTAMA. Semua hak dilindungi undang-undang.</p>
+          </div>
         </div>
       </div>
     </footer>

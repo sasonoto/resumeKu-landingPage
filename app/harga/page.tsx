@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -36,8 +37,10 @@ export const metadata = {
 export default function HargaPage() {
   const packages = [
     {
+      id: "starter",
       name: "Starter",
       price: "Rp 15,000",
+      amount: 15000,
       tokens: 25,
       popular: false,
       features: [
@@ -50,8 +53,10 @@ export default function HargaPage() {
       ]
     },
     {
+      id: "professional",
       name: "Professional", 
       price: "Rp 35,000",
+      amount: 35000,
       tokens: 75,
       popular: true,
       features: [
@@ -66,8 +71,10 @@ export default function HargaPage() {
       ]
     },
     {
+      id: "enterprise",
       name: "Enterprise",
-      price: "Rp 75,000", 
+      price: "Rp 75,000",
+      amount: 75000,
       tokens: 200,
       popular: false,
       features: [
@@ -83,8 +90,10 @@ export default function HargaPage() {
       ]
     },
     {
+      id: "ultimate",
       name: "Ultimate",
       price: "Rp 150,000",
+      amount: 150000,
       tokens: 500, 
       popular: false,
       features: [
@@ -253,9 +262,9 @@ export default function HargaPage() {
                       variant={pkg.popular ? 'default' : 'outline'}
                       asChild
                     >
-                      <a href="https://app.resumeku.id">
+                      <Link href={`/checkout?package=${pkg.id}&name=${encodeURIComponent(pkg.name)}&amount=${pkg.amount}&tokens=${pkg.tokens}`}>
                         Pilih Paket Ini <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -401,12 +410,14 @@ export default function HargaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gradient-primary text-white hover:shadow-glow transition-all duration-300" asChild>
-                <a href="https://app.resumeku.id">
+                <Link href="/checkout">
                   Pilih Paket Sekarang <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                Coba Gratis Dulu
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" asChild>
+                <Link href="/checkout?package=starter&name=Starter&amount=15000&tokens=25">
+                  Coba Gratis Dulu
+                </Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">

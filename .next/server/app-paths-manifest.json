@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/harga/page": "app/harga/page.js",
-  "/cara-membuat-cv/page": "app/cara-membuat-cv/page.js"
+  "/checkout/page": "app/checkout/page.js"
 }
