@@ -50,8 +50,8 @@ export async function POST(request: NextRequest) {
       success: true,
       data: {
         invoiceId: invoice.id,
-        externalId: invoice.external_id,
-        paymentUrl: invoice.invoice_url,
+        externalId: invoice.externalId,
+        paymentUrl: invoice.invoiceUrl,
         status: invoice.status,
         amount: invoice.amount,
       }

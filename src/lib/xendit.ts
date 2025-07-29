@@ -17,8 +17,8 @@ export interface PaymentData {
 
 export interface XenditInvoiceResponse {
   id: string
-  external_id: string
-  invoice_url: string
+  externalId: string
+  invoiceUrl: string
   status: string
   amount: number
   created: string
@@ -34,14 +34,14 @@ export class XenditService {
       const externalId = `resumeku-${paymentData.packageId}-${Date.now()}`
       
       const invoiceData = {
-        external_id: externalId,
+        externalId: externalId,
         amount: paymentData.amount,
         description: `ResumeKu ${paymentData.packageName} Package - ${paymentData.tokens} tokens`,
-        invoice_duration: 86400, // 24 hours
+        invoiceDuration: 86400, // 24 hours
         customer: {
-          given_names: paymentData.customerName,
+          givenNames: paymentData.customerName,
           email: paymentData.customerEmail,
-          mobile_number: paymentData.customerPhone,
+          mobileNumber: paymentData.customerPhone,
         },
         currency: 'IDR',
         items: [
@@ -53,8 +53,8 @@ export class XenditService {
             url: process.env.NEXT_PUBLIC_APP_URL || 'https://resumeku.id',
           }
         ],
-        success_redirect_url: `${process.env.NEXT_PUBLIC_APP_URL}/payment/success?external_id=${externalId}`,
-        failure_redirect_url: `${process.env.NEXT_PUBLIC_APP_URL}/payment/failed?external_id=${externalId}`,
+        successRedirectUrl: `${process.env.NEXT_PUBLIC_APP_URL || 'https://resumeku.id'}/payment/success?external_id=${externalId}`,
+        failureRedirectUrl: `${process.env.NEXT_PUBLIC_APP_URL || 'https://resumeku.id'}/payment/failed?external_id=${externalId}`,
         fees: [
           {
             type: 'ADMIN',
@@ -62,7 +62,7 @@ export class XenditService {
           }
         ],
         locale: 'id',
-        payment_methods: [
+        paymentMethods: [
           'BANK_TRANSFER',
           'CREDIT_CARD', 
           'EWALLET',
@@ -71,19 +71,22 @@ export class XenditService {
         ],
       }
 
-      console.log('Creating invoice with data:', JSON.stringify(invoiceData, null, 2))
       const response = await xendit.Invoice.createInvoice({
         data: invoiceData
       })
       
       return {
-        id: response.id,
-        external_id: response.external_id,
-        invoice_url: response.invoice_url,
-        status: response.status,
-        amount: response.amount,
-        created: response.created,
-        updated: response.updated,
+        id: response.id || '',
+        externalId: response.externalId || externalId,
+        invoiceUrl: response.invoiceUrl || '',
+        status: response.status || 'PENDING',
+        amount: response.amount || 0,
+        created: typeof response.created === 'string'
+          ? response.created
+          : response.created?.toISOString() || new Date().toISOString(),
+        updated: typeof response.updated === 'string'
+          ? response.updated
+          : response.updated?.toISOString() || new Date().toISOString(),
       }
     } catch (error: any) {
       console.error('Xendit Invoice Creation Error:', error)
@@ -97,7 +100,7 @@ export class XenditService {
   static async getInvoiceStatus(externalId: string) {
     try {
       const response = await xendit.Invoice.getInvoices({
-        external_id: externalId,
+        externalId: externalId,
       })
       
       if (response.length === 0) {
