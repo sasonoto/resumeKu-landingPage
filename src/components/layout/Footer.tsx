@@ -7,8 +7,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">R</span>
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <img src="/logo.png" alt="ResumeKu Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-bold text-xl text-gray-800">ResumeKu</span>
             </div>
