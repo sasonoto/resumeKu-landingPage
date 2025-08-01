@@ -7,7 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ResumeKu - CV Builder Indonesia Terbaik',
+  title: 'ResumeKu - CV Builder Dengan Kekuatan AI',
   description: 'Buat CV profesional dengan AI dalam hitungan menit. Template premium, optimasi ATS, dan panduan karir untuk mendapatkan pekerjaan impian Anda.',
   keywords: 'cv builder, resume builder indonesia, buat cv, template cv, cv ats, cv professional',
   authors: [{ name: 'ResumeKu Team' }],

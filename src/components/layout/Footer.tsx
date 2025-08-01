@@ -69,9 +69,8 @@ export const Footer = () => {
             <h4 className="font-semibold text-gray-800 mb-2 text-sm">Informasi Perusahaan</h4>
             <div className="text-xs text-gray-600 space-y-1">
               <p className="font-medium">PT SHF NIAGA UTAMA</p>
-              <p>Jl. Raya Bogor - Sukabumi, Kel. Cigombong, Kec. Cigombong</p>
-              <p>Kabupaten Bogor, Jawa Barat 16110</p>
-              <p>Email: shf.niagautama@gmail.com</p>
+              <p>Bogor, Jawa Barat, Indonesia</p>
+              <p>Email: <a href="mailto:hello@resumeku.id" className="underline hover:text-gray-800">hello@resumeku.id</a></p>
             </div>
           </div>
           <div className="text-center text-gray-500 text-xs">
