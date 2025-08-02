@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import GoogleAnalytics from '../src/components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={inter.className}>
+        <GoogleAnalytics />
         <Providers>
           {children}
         </Providers>
